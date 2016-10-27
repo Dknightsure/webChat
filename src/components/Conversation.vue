@@ -1,7 +1,11 @@
 <template>
   <div class="conversation">
     <div class="header">
-      {{ $route.params.conversationId }}
+      <i class="fa fa-angle-left"
+         v-on:click="toBack"></i>
+      <p>
+        {{ $route.params.conversationId }}
+      </p>
     </div>
     <div class="talk-div">
       <ul class="talk-list">
@@ -27,11 +31,18 @@
 </template>
 
 <script>
+import { router } from '../main.js'
+
 export default {
   name: 'hello',
   data () {
     return {
       msg: 'Conversation'
+    }
+  },
+  methods: {
+    toBack () {
+      router.go(-1)
     }
   }
 }
@@ -159,6 +170,13 @@ export default {
   font-size: 45px;
   line-height: 150px;
   z-index: 10;
+
+  i.fa-angle-left{
+    font-size: 65px;
+    line-height: 150px;
+    margin-left: 20px;
+    float: left;
+  }
 }
 
 </style>

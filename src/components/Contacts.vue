@@ -11,7 +11,7 @@
           v-on:click="toUserProfile(item.userId)">
         <img src="" alt="" />
         <p>
-          {{ item.name }}
+          {{ item.alias }}
         </p>
       </li>
     </ul>

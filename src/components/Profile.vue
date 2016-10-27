@@ -1,6 +1,8 @@
 <template>
   <div class="profile">
     <div class="header">
+      <i class="fa fa-angle-left"
+         v-on:click="toBack"></i>
       Profile
     </div>
     <div class="avatar">
@@ -52,10 +54,17 @@
 </template>
 
 <script>
+import { router } from '../main.js'
+
 export default {
   data () {
     return {
       msg: 'Profile'
+    }
+  },
+  methods: {
+    toBack () {
+      router.go(-1)
     }
   }
 }
@@ -162,6 +171,13 @@ ul.person-file{
   font-size: 45px;
   line-height: 150px;
   z-index: 10;
+
+  i.fa-angle-left{
+    font-size: 65px;
+    line-height: 150px;
+    margin-left: 20px;
+    float: left;
+  }
 }
 
 h2{
