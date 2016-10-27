@@ -8,6 +8,7 @@ import Discover from './components/Discover'
 import Me from './components/Me'
 import Conversation from './components/Conversation'
 import Main from './components/Main'
+import Profile from './components/Profile'
 import 'font-awesome/css/font-awesome.css'
 
 Vue.use(VueRouter)
@@ -40,6 +41,11 @@ const routes = [
     path: '/Conversation/:conversationId',
     name: 'conversationPage',
     component: Conversation
+  },
+  {
+    path: '/Profile/:userId',
+    name: 'profilePage',
+    component: Profile
   }
 ]
 

@@ -7,7 +7,8 @@
       <input type="text" placeholder="Contacts Search" name="text">
     </div>
     <ul class="contacts">
-      <li v-for="item in contactsList">
+      <li v-for="item in contactsList"
+          v-on:click="toUserProfile(item.userId)">
         <img src="" alt="" />
         <p>
           {{ item.name }}
@@ -22,6 +23,7 @@
 
 <script>
 import contactsListTestData from '../testData/contactsList.json'
+import { router } from '../main.js'
 
 export default {
   name: 'hello',
@@ -29,11 +31,36 @@ export default {
     return {
       contactsList: contactsListTestData
     }
+  },
+  methods: {
+    toUserProfile (userId) {
+      router.push(
+        {
+          name: 'profilePage',
+          params: { userId }
+        }
+      )
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
+
+.header{
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 150px;
+  background-color: #75cc5b;
+  text-align: center;
+  color: #ffffff;
+  font-size: 45px;
+  line-height: 150px;
+  z-index: 10;
+}
 
 .container{
   padding-bottom: 150px;
