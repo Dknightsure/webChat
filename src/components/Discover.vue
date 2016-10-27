@@ -62,6 +62,21 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 
+.header{
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 150px;
+  background-color: #75cc5b;
+  text-align: center;
+  color: #ffffff;
+  font-size: 45px;
+  line-height: 150px;
+  z-index: 10;
+}
+
 .monents,
 .qr,
 .shake,
