@@ -33,7 +33,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 
 .container{
@@ -76,7 +75,7 @@ ul.contacts{
       overflow: hidden;
       background-color: #75cc5b;
       float: left;
-      margin-right: 30px;
+      margin-right: 25px;
     }
 
     p{

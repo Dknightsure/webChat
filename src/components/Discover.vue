@@ -4,46 +4,46 @@
       Discover
     </div>
     <div class="monents">
-      <i class="fa fa-superpowers fa-4x fl"></i>
+      <i class="fa fa-superpowers fl"></i>
       <p>
         Monents
       </p>
-      <i class="fa fa-angle-right fa-4x fr"></i>
+      <i class="fa fa-angle-right fr"></i>
     </div>
     <div class="qr">
-      <i class="fa fa-qrcode fa-4x fl"></i>
+      <i class="fa fa-qrcode fl"></i>
       <p>
         Scan QR Code
       </p>
-      <i class="fa fa-angle-right fa-4x fr"></i>
+      <i class="fa fa-angle-right fr"></i>
     </div>
     <div class="shake">
-      <i class="fa fa-mobile fa-4x fl"></i>
+      <i class="fa fa-mobile fl"></i>
       <p>
         Shake
       </p>
-      <i class="fa fa-angle-right fa-4x fr"></i>
+      <i class="fa fa-angle-right fr"></i>
     </div>
     <div class="near-by">
-      <i class="fa fa-map-marker fa-4x fl"></i>
+      <i class="fa fa-map-marker fl"></i>
       <p>
         People Nearby
       </p>
-      <i class="fa fa-angle-right fa-4x fr"></i>
+      <i class="fa fa-angle-right fr"></i>
     </div>
     <div class="bottle">
-      <i class="fa fa-tint fa-4x fl"></i>
+      <i class="fa fa-tint fl"></i>
       <p>
         Message in a Bottle
       </p>
-      <i class="fa fa-angle-right fa-4x fr"></i>
+      <i class="fa fa-angle-right fr"></i>
     </div>
     <div class="game">
-      <i class="fa fa-gamepad fa-4x fl"></i>
+      <i class="fa fa-gamepad fl"></i>
       <p>
         Games
       </p>
-      <i class="fa fa-angle-right fa-4x fr"></i>
+      <i class="fa fa-angle-right fr"></i>
     </div>
   </div>
 </template>
@@ -53,7 +53,7 @@ export default {
   name: 'hello',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Discover'
     }
   }
 }
@@ -76,6 +76,7 @@ export default {
 
   i{
     line-height: 80px;
+    font-size: 50px;
   }
 
   i.fl{

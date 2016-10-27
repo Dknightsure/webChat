@@ -7,7 +7,8 @@
       <input type="text" placeholder="Message Search" name="text">
     </div>
     <ul class="chat">
-      <li v-for="item in chatList">
+      <li v-for="item in chatList"
+          v-on:click="toChat(item.conversationId)">
         <img src="" alt="" />
         <p class="talker-name">
           {{ item.name }}
@@ -25,18 +26,27 @@
 
 <script>
 import chatListTestData from '../testData/chatList.json'
+import { router } from '../main.js'
 
 export default {
-  name: 'hello',
   data () {
     return {
       chatList: chatListTestData
+    }
+  },
+  methods: {
+    toChat (conversationId = 'test') {
+      router.push(
+        {
+          name: 'conversationPage',
+          params: { conversationId }
+        }
+      )
     }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 
 .container{
@@ -79,7 +89,7 @@ ul.chat{
       overflow: hidden;
       background-color: #75cc5b;
       float: left;
-      margin-right: 10px;
+      margin-right: 20px;
     }
 
     .talker-name{

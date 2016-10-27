@@ -1,48 +1,18 @@
 <template>
   <div id="app">
+    <router-link to="/Main/Chats" class="outer-link"></router-link>
     <router-view></router-view>
-    <ul class="nav">
-      <li>
-        <router-link to="/Chats">
-          <i class="fa fa-comment-o fa-4x"></i>
-          <p>
-            Chats
-          </p>
-        </router-link>
-      </li>
-      <li>
-        <router-link to="/Contacts">
-          <i class="fa fa-address-book-o fa-4x"></i>
-          <p>
-            Contacts
-          </p>
-        </router-link>
-      </li>
-      <li>
-        <router-link to="/Discover">
-          <i class="fa fa-compass fa-4x"></i>
-          <p>
-            Discover
-          </p>
-        </router-link>
-      </li>
-      <li>
-        <router-link to="/Me">
-          <i class="fa fa-user fa-4x"></i>
-          <p>
-            Me
-          </p>
-        </router-link>
-      </li>
-    </ul>
+  </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
+import Main from './components/Main'
+import Conversation from './components/Conversation'
 export default {
   name: 'app',
   components: {
-    Hello
+    'main-page': Main,
+    'conversation-page': Conversation
   }
 }
 </script>
@@ -114,11 +84,11 @@ ul.nav{
       display: block;
       width: 100%;
       height: 100%;
+      color: #5a5555;
     }
 
     a.active{
-      background-color: #75cc5b;
-      color: #ffffff;
+      color: #75cc5b;
     }
 
     i{
@@ -149,6 +119,10 @@ ul.nav{
   font-size: 45px;
   line-height: 150px;
   z-index: 10;
+}
+
+.outer-link{
+  display: none;
 }
 
 </style>

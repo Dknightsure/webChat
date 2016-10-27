@@ -6,17 +6,41 @@ import Chats from './components/Chats'
 import Contacts from './components/Contacts'
 import Discover from './components/Discover'
 import Me from './components/Me'
+import Conversation from './components/Conversation'
+import Main from './components/Main'
 import 'font-awesome/css/font-awesome.css'
 
 Vue.use(VueRouter)
 Vue.use(Vuex)
 
 const routes = [
-  { path: '/', redirect: '/Chats' },
-  { path: '/Chats', component: Chats },
-  { path: '/Contacts', component: Contacts },
-  { path: '/Discover', component: Discover },
-  { path: '/Me', component: Me }
+  { path: '/', redirect: '/Main/Chats' },
+  { path: '/Main',
+    component: Main,
+    children: [
+      {
+        path: 'Chats',
+        component: Chats
+      },
+      {
+        path: 'Contacts',
+        component: Contacts
+      },
+      {
+        path: 'Discover',
+        component: Discover
+      },
+      {
+        path: 'Me',
+        component: Me
+      }
+    ]
+  },
+  {
+    path: '/Conversation/:conversationId',
+    name: 'conversationPage',
+    component: Conversation
+  }
 ]
 
 const router = new VueRouter({
@@ -35,3 +59,4 @@ new Vue({
 //   template: '<App/>',
 //   components: { App }
 // })
+export { router }
