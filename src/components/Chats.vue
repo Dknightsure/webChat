@@ -26,7 +26,7 @@
 
 <script>
 import chatListTestData from '../testData/chatList.json'
-import { router } from '../main.js'
+import router from '../router.js'
 
 export default {
   data () {
