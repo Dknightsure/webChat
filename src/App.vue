@@ -7,12 +7,10 @@
 
 <script>
 import Main from './components/Main'
-import Conversation from './components/Conversation'
 export default {
   name: 'app',
   components: {
-    'main-page': Main,
-    'conversation-page': Conversation
+    'main-page': Main
   }
 }
 </script>

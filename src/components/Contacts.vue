@@ -23,7 +23,7 @@
 
 <script>
 import contactsListTestData from '../testData/contactsList.json'
-import { router } from '../main.js'
+import router from '../router.js'
 
 export default {
   name: 'hello',

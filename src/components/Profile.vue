@@ -54,7 +54,7 @@
 </template>
 
 <script>
-import { router } from '../main.js'
+import router from '../router.js'
 
 export default {
   data () {
