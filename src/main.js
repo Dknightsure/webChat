@@ -9,13 +9,14 @@ import Me from './components/Me'
 import Conversation from './components/Conversation'
 import Main from './components/Main'
 import Profile from './components/Profile'
+import Login from './components/Login'
 import 'font-awesome/css/font-awesome.css'
 
 Vue.use(VueRouter)
 Vue.use(Vuex)
 
 const routes = [
-  { path: '/', redirect: '/Main/Chats' },
+  { path: '/', redirect: '/Login' },
   { path: '/Main',
     component: Main,
     children: [
@@ -46,6 +47,10 @@ const routes = [
     path: '/Profile/:userId',
     name: 'profilePage',
     component: Profile
+  },
+  {
+    path: '/Login',
+    component: Login
   }
 ]
 
